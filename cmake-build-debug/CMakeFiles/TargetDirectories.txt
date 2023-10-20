@@ -1,0 +1,3 @@
+/home/aleprominecraft/Documents/github/Server-ProyectoII/cmake-build-debug/CMakeFiles/Server_ProyectoII.dir
+/home/aleprominecraft/Documents/github/Server-ProyectoII/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/aleprominecraft/Documents/github/Server-ProyectoII/cmake-build-debug/CMakeFiles/rebuild_cache.dir
