@@ -1,6 +1,6 @@
-/app/extra/clion/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/app/extra/clion/bin/ninja/linux/x64/ninja -G Ninja -S /home/aleprominecraft/Documents/github/Server-ProyectoII -B /home/aleprominecraft/Documents/github/Server-ProyectoII/cmake-build-debug
--- The C compiler identification is GNU 12.2.0
--- The CXX compiler identification is GNU 12.2.0
+/snap/clion/250/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /home/jct/Documents/Server-ProyectoII -B /home/jct/Documents/Server-ProyectoII/cmake-build-debug
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
 -- Detecting C compiler ABI info
 -- Detecting C compiler ABI info - done
 -- Check for working C compiler: /usr/bin/cc - skipped
@@ -11,9 +11,9 @@
 -- Check for working CXX compiler: /usr/bin/c++ - skipped
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
--- Found PkgConfig: /usr/bin/pkg-config (found version "2.0.2") 
+-- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") 
 -- Checking for module 'gtk+-3.0'
---   Found gtk+-3.0, version 3.24.38
--- Configuring done
--- Generating done
--- Build files have been written to: /home/aleprominecraft/Documents/github/Server-ProyectoII/cmake-build-debug
+--   Found gtk+-3.0, version 3.24.33
+-- Configuring done (0.5s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/jct/Documents/Server-ProyectoII/cmake-build-debug
