@@ -18,6 +18,7 @@ GtkTextView *myTextView;
 
 const int matrixSize = 10;
 
+// Estructura utilizada para el Pathfinding
 struct Node {
     int x, y;
     int f, g, h;
@@ -82,7 +83,7 @@ vector<pair<int, int>> findPath(int matrix[matrixSize][matrixSize], int startX, 
     return path;
 }
 
-
+// Estructura utilizada para el display de los atributos de los Samurai
 struct Samurai {
     int uniqueId;
     int age;
@@ -144,6 +145,7 @@ struct Samurai {
 
 };
 
+// Main
 int main(int argc, char *argv[]) {
     // Crear un socket
     int serverSocket = socket(AF_INET, SOCK_STREAM, 0);
