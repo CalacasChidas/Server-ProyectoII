@@ -159,7 +159,7 @@ int main(int argc, char *argv[]) {
     serverAddr.sin_addr.s_addr = inet_addr("127.0.0.1");
 
     // Vincular el socket a la dirección
-    if (bind(serverSocket, (struct sockaddr*)&serverAddr, sizeof(serverAddr)) == -1) {
+    if (bind(serverSocket, (struct sockaddr *) &serverAddr, sizeof(serverAddr)) == -1) {
         cerr << "Error al vincular el socket a la dirección" << endl;
         close(serverSocket);
         return 1;
@@ -203,7 +203,7 @@ int main(int argc, char *argv[]) {
 
     // Enseña el camino del samurai
     cout << "Camino del samurai: ";
-    for (const auto& point : path) {
+    for (const auto &point: path) {
         cout << "(" << point.first << ", " << point.second << ") ";
     }
     cout << endl;
@@ -218,7 +218,8 @@ int main(int argc, char *argv[]) {
     gtk_init(&argc, &argv);
 
     builder = gtk_builder_new();
-    gtk_builder_add_from_file(builder, "/home/aleprominecraft/Documents/github/Server-ProyectoII/samuraiStats.glade", NULL);
+    gtk_builder_add_from_file(builder, "/home/aleprominecraft/Documents/github/Server-ProyectoII/samuraiStats.glade",
+                              NULL);
 
     window = GTK_WIDGET(gtk_builder_get_object(builder, "MyWindow"));
     myTextView = GTK_TEXT_VIEW(gtk_builder_get_object(builder, "MyTextView"));
@@ -261,18 +262,13 @@ int main(int argc, char *argv[]) {
         // Aceptar una conexión entrante
         sockaddr_in clientAddr;
         socklen_t clientAddrSize = sizeof(clientAddr);
-        int clientSocket = accept(serverSocket, (struct sockaddr*)&clientAddr, &clientAddrSize);
+        int clientSocket = accept(serverSocket, (struct sockaddr *) &clientAddr, &clientAddrSize);
         if (clientSocket == -1) {
             cerr << "Error al aceptar la conexión" << endl;
             continue; // Continuar esperando conexiones
         }
 
-<<<<<<< Updated upstream
         cout << "Cliente conectado" << endl;
-//ADS
-=======
-        std::cout << "Cliente conectado" << std::endl;
->>>>>>> Stashed changes
 
         while (true) {
             // Recibir la palabra clave del cliente
@@ -299,27 +295,13 @@ int main(int argc, char *argv[]) {
                 break;
             }
 
-<<<<<<< Updated upstream
-// Enviar el resultado al cliente
-=======
-            // Convierte los números a enteros
-            int a = std::stoi(num1);
-            int b = std::stoi(num2);
 
-            // Calcular la suma
-            int result = suma(a, b);
-
-            // Enviar el resultado al cliente
-            send(clientSocket, &result, sizeof(result), 0);
->>>>>>> Stashed changes
+            // Cerrar el socket del cliente
+            close(clientSocket);
         }
 
-        // Cerrar el socket del cliente
-        close(clientSocket);
+
     }
 
 
-
 }
-
-
