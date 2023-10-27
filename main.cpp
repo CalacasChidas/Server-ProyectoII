@@ -267,8 +267,12 @@ int main(int argc, char *argv[]) {
             continue; // Continuar esperando conexiones
         }
 
+<<<<<<< Updated upstream
         cout << "Cliente conectado" << endl;
 //ADS
+=======
+        std::cout << "Cliente conectado" << std::endl;
+>>>>>>> Stashed changes
 
         while (true) {
             // Recibir la palabra clave del cliente
@@ -279,7 +283,7 @@ int main(int argc, char *argv[]) {
                 break;
             }
 
-// Recibir el primer número del cliente
+            // Recibir el primer número del cliente
             char num1[1024] = {0};
             bytesRead = recv(clientSocket, num1, sizeof(num1), 0);
             if (bytesRead <= 0) {
@@ -287,7 +291,7 @@ int main(int argc, char *argv[]) {
                 break;
             }
 
-// Recibir el segundo número del cliente
+            // Recibir el segundo número del cliente
             char num2[1024] = {0};
             bytesRead = recv(clientSocket, num2, sizeof(num2), 0);
             if (bytesRead <= 0) {
@@ -295,7 +299,19 @@ int main(int argc, char *argv[]) {
                 break;
             }
 
+<<<<<<< Updated upstream
 // Enviar el resultado al cliente
+=======
+            // Convierte los números a enteros
+            int a = std::stoi(num1);
+            int b = std::stoi(num2);
+
+            // Calcular la suma
+            int result = suma(a, b);
+
+            // Enviar el resultado al cliente
+            send(clientSocket, &result, sizeof(result), 0);
+>>>>>>> Stashed changes
         }
 
         // Cerrar el socket del cliente
