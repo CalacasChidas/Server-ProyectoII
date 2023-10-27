@@ -190,7 +190,7 @@ int main(int argc, char *argv[]) {
         for (int j = 0; j < 10; j++) {
             cout << matrix[i][j] << " ";
         }
-        cout << endl;
+        //cout << endl;
     }
 
     // Defina el punto de inicio y de llegada de los samurai
@@ -210,7 +210,7 @@ int main(int argc, char *argv[]) {
 
     srand(static_cast<unsigned>(std::time(0)));
 
-    const int numGenerations = 20;
+    const int numGenerations = 5;
 
     Samurai bestSamurai(1);  // El primer samurái es el mejor en la primera generación
 
